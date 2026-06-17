@@ -1,0 +1,74 @@
+{
+  "theme_archetype": "Archetype 1 (Organic & Earthy / Trust) with Luxury Elements (Light Theme)",
+  "design_philosophy": "A modern, premium legal/financial recovery site for 'Flowstar Asset Recovery'. The design uses high-contrast navy against powder blue to establish authority, with gold accents to signal wealth and successful recovery. The layout relies on generous spacing and asymmetrical bento grids to evoke a bespoke 'Old Money Tech' aesthetic, avoiding the generic SaaS look.",
+  "colors": {
+    "background_primary": "#F8FBFC",
+    "background_secondary": "#E4F0F5",
+    "powder_blue_accent": "#C1D9E8",
+    "primary_gold": "#D4AF37",
+    "primary_gold_hover": "#B5952F",
+    "text_main": "#0C2340",
+    "text_muted": "#526477",
+    "surface_glass": "rgba(255, 255, 255, 0.75)",
+    "border_subtle": "rgba(12, 35, 64, 0.1)"
+  },
+  "typography": {
+    "headings": {
+      "family": "Cormorant Garamond",
+      "classes": "font-serif tracking-tight text-[#0C2340]",
+      "weight_strategy": "Use font-light for massive hero text, font-medium for standard headings."
+    },
+    "body": {
+      "family": "IBM Plex Sans",
+      "classes": "font-sans leading-relaxed text-[#526477]"
+    },
+    "labels": {
+      "classes": "uppercase tracking-[0.2em] text-xs font-semibold text-[#0C2340]"
+    }
+  },
+  "layout": {
+    "spacing_strategy": "Generous. Use py-24 to py-32 for major sections. Containers should have ample p-8 to p-12 inner padding.",
+    "grid_system": "Bento grids with asymmetrical spans (e.g., col-span-8 and col-span-4). Avoid perfect symmetry. Leave breathing room.",
+    "border_radius": "Use rounded-xl for a soft modern feel, avoiding sharp harsh edges.",
+    "alignment": "Left-align paragraphs, labels, and forms. Center-align only major section headers or standalone CTAs."
+  },
+  "ui_components": {
+    "header": "Crystal Glassmorphism: backdrop-blur-xl, bg-white/70, 1px border-b border-black/5. Sticky top with z-50.",
+    "hero": "Asymmetric split or bento style. Soft powder blue background block or very light overlay on architecture image with deep navy serif typography. High-contrast gold primary CTA.",
+    "claim_checker_form": "Multi-step Shadcn form. Neumorphic or soft-shadowed card embedded in the layout. Clear step indicators for: State, Property Type, Foreclosure Date, Contact Info.",
+    "buttons": "Primary: bg-[#D4AF37] text-[#0C2340] font-semibold hover:bg-[#B5952F] transition-all. Secondary: border border-[#0C2340] text-[#0C2340] hover:bg-[#0C2340] hover:text-white.",
+    "cards": "Flat background with a 1px subtle border, slight lift (-translate-y-1) and shadow-lg on hover.",
+    "testimonials_carousel": "Use Shadcn Carousel component (Embla). Cards should feature generous padding, quote icons, and clear typography.",
+    "blog_section": "Editorial ribbon or grid layout. Large typography for titles, muted colors for publish dates and categories."
+  },
+  "media": {
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&q=85&w=1200",
+      "description": "White modern cement building under blue sky, matches powder blue aesthetic and signifies structural trust."
+    },
+    "about_team_image": {
+      "url": "https://images.pexels.com/photos/12903168/pexels-photo-12903168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Professional team collaborating, representing the Flowstar Asset Recovery experts."
+    },
+    "process_image": {
+      "url": "https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&q=85&w=1200",
+      "description": "Close up of person signing documents, ideal for the 'How It Works / Our Process' section."
+    }
+  },
+  "motion": {
+    "global": "Implement smooth scrolling (e.g., lenis).",
+    "entrance": "Use framer-motion for staggered fade-in-up animations on lists, form steps, and bento items.",
+    "hover": "Apply transition-transform and shadow utilities on cards and buttons (e.g., transition-all duration-300 ease-out)."
+  },
+  "icons_library": "lucide-react",
+  "instructions_to_main_agent": [
+    "Install required dependencies for motion and icons, ensuring you use .js files for React components.",
+    "Import Cormorant Garamond and IBM Plex Sans via Google Fonts in the HTML entry point or index.css.",
+    "Build the claim checker as a multi-step interactive component using Shadcn form primitives and validation logic.",
+    "Include 'data-testid' attributes on all interactive elements (e.g., data-testid='claim-start-button', data-testid='faq-accordion').",
+    "Ensure contrast ratios meet accessibility standards, specifically ensuring white or navy text is readable against the gold and powder blue backgrounds.",
+    "Do not use generic 'Inter' for headings; stick strictly to the font strategy outlined.",
+    "Avoid standard symmetrical Bootstrap-style columns; apply the 'Tetris' bento grid logic for feature sections.",
+    "For the Footer, use massive space (py-24), dark background (navy), and gold accents for a premium finish with necessary legal disclaimers."
+  ]
+}
