@@ -3,7 +3,6 @@ import Hero from "@/components/site/Hero";
 import StatsRibbon from "@/components/site/StatsRibbon";
 import Process from "@/components/site/Process";
 import ClaimChecker from "@/components/site/ClaimChecker";
-import Testimonials from "@/components/site/Testimonials";
 import About from "@/components/site/About";
 import BlogPreview from "@/components/site/BlogPreview";
 import FAQ from "@/components/site/FAQ";
@@ -24,7 +23,6 @@ export default function Home() {
       <StatsRibbon />
       <Process />
       <ClaimChecker />
-      <Testimonials />
       <About />
       <BlogPreview />
       <FAQ />
