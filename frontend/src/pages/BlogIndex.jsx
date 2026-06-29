@@ -8,9 +8,15 @@ const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 export default function BlogIndex() {
   const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    axios.get(`${API}/blog/posts`).then((r) => setPosts(r.data)).catch(() => {});
-  }, []);
+useEffect(() => {
+  axios
+    .get(`${API}/blog/posts`)
+    .then((r) => {
+      console.log("Blog API:", r.data);
+      setPosts(r.data);
+    })
+    .catch((err) => console.error(err));
+}, []);
 
   return (
     <div data-testid="blog-index-page" className="bg-[#F8FBFC] pt-32 pb-24">
