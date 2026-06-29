@@ -12,10 +12,24 @@ useEffect(() => {
   axios
     .get(`${API}/blog/posts`)
     .then((r) => {
-      console.log("Blog API:", r.data);
-      setPosts(r.data);
+      console.log("Blog API response:", r.data);
+      console.log("Is array?", Array.isArray(r.data));
+
+      if (Array.isArray(r.data)) {
+        setPosts(r.data);
+      } else if (Array.isArray(r.data.posts)) {
+        setPosts(r.data.posts);
+      } else if (Array.isArray(r.data.data)) {
+        setPosts(r.data.data);
+      } else {
+        console.error("Unexpected response:", r.data);
+        setPosts([]);
+      }
     })
-    .catch((err) => console.error(err));
+    .catch((err) => {
+      console.error("API error:", err);
+      setPosts([]);
+    });
 }, []);
 
   return (
