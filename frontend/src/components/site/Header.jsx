@@ -32,7 +32,12 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-        <Link to="/" data-testid="header-logo" className="flex items-center gap-2 group">
+        <Link
+          to="/"
+          data-testid="header-logo"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="flex items-center gap-2 group"
+        >
           <span className="relative inline-flex items-center justify-center w-9 h-9 rounded-md bg-[#0C2340] text-[#D4AF37] font-serif text-xl">
             F
             <span className="absolute -bottom-1 -right-1 w-2.5 h-2.5 rounded-full bg-[#D4AF37]" />
