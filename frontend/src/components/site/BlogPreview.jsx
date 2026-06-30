@@ -9,18 +9,17 @@ export default function BlogPreview() {
   const [posts, setPosts] = useState([]);
 
 useEffect(() => {
-  axios
-    .get(`${API}/blog/posts`)
+  axios.get(`${API}/blog/posts`)
     .then((r) => {
       console.log("API Response:", r.data);
-      console.log("Is array?", Array.isArray(r.data));
+      console.log("Is Array?", Array.isArray(r.data));
 
       if (Array.isArray(r.data)) {
         setPosts(r.data.slice(0, 3));
       } else if (Array.isArray(r.data.posts)) {
         setPosts(r.data.posts.slice(0, 3));
       } else {
-        console.error("Unexpected API response:", r.data);
+        console.error("Unexpected response:", r.data);
         setPosts([]);
       }
     })
